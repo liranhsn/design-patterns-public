@@ -46,9 +46,9 @@ public class MiniVanFactory extends AbstractCarFactory {
 	 */
 	@Override
 	public Hood createHood(String color) {
-		Hood hood = new MiniVanHood(color);
-		hood.setId(getNextId());
-		return hood;
+		Hood result = new MiniVanHood(color);
+		result.setId(getNextId());
+		return result;
 	}
 
 	/*

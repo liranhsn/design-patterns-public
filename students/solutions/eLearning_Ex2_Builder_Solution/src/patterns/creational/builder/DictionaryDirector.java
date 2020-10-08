@@ -28,30 +28,30 @@ import java.util.Collection;
 import java.util.Scanner;
 
 /**
- * The Class TextWordsDirector manages the dictionary building process by
+ * The Class DictionaryDirector manages the dictionary building process by
  * delegating the build process stages to it's dependent (wrapped) builder.
  */
-public class TextWordsDirector {
+public class DictionaryDirector {
 
 	// This director is complete. Just review it, nothing to do here
 
 	/** The builder. */
-	private WordsBuilder builder;
+	private DictionaryBuilder builder;
 
 	/**
 	 * Instantiates a new text words director.
 	 *
 	 * @param builder the builder
 	 */
-	public TextWordsDirector(WordsBuilder builder) {
+	public DictionaryDirector(DictionaryBuilder builder) {
 		this.builder = builder;
 	}
 
 	/**
 	 * Prints the collection.
 	 */
-	public void printCollection() {
-		Collection<?> dictionary = this.builder.getCollection();
+	public void printDictionary() {
+		Collection<?> dictionary = this.builder.getDictionary();
 		System.out.printf("%s: (%d entries)%n%n", "Your dictionary contains the following entries", dictionary.size());
 		dictionary.forEach(System.out::println);
 	}
@@ -61,7 +61,7 @@ public class TextWordsDirector {
 	 *
 	 * @param textFile the text file
 	 */
-	public void produceCollection(File textFile) {
+	public void populateDictionary(File textFile) {
 		try (BufferedReader reader = new BufferedReader(new FileReader(textFile));) {
 			String line = null;
 			while ((line = reader.readLine()) != null) {
@@ -87,11 +87,11 @@ public class TextWordsDirector {
 	public static void main(String[] args) {
 		try {
 			File inputFile = new File("words.txt");
-			// WordsBuilder builder = new WordsCounterBuilder();
-			WordsBuilder builder = new DictionaryBuilder();
-			TextWordsDirector director = new TextWordsDirector(builder);
-			director.produceCollection(inputFile);
-			director.printCollection();
+			// DictionaryBuilder builder = new CounterDictionaryBuilder();
+			DictionaryBuilder builder = new ClassicDictionaryBuilder();
+			DictionaryDirector director = new DictionaryDirector(builder);
+			director.populateDictionary(inputFile);
+			director.printDictionary();
 			System.out.println(">>> Done");
 		} catch (Exception e) {
 			e.printStackTrace();

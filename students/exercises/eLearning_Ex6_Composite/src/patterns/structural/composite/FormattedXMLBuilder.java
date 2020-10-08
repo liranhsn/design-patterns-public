@@ -37,74 +37,75 @@ import java.util.stream.IntStream;
  */
 public class FormattedXMLBuilder implements XMLBuilder {
 
-    /*
-     *  TODO: 1. review only
-     */
+	/*
+	 * TODO: 1. review only
+	 */
 
-    public final static String INDENT_STRING = "  ";
-    private StringBuilder sb = new StringBuilder();
+	public final static String INDENT_STRING = "  ";
+	private StringBuilder sb = new StringBuilder();
 
-    /*
-     * (non-Javadoc)
-     *
-     * @see
-     * patterns.structural.composite.XMLBuilder#build(patterns.structural.composite
-     * .XMLElement)
-     */
-    @Override
-    public void build(XMLElement element) {
-        // start at level '0' (no indentation)
-        this.buildInternal(element, 0);
-    }
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * patterns.structural.composite.XMLBuilder#build(patterns.structural.composite
+	 * .XMLElement)
+	 */
+	@Override
+	public void build(XMLElement element) {
+		// start at level '0' (no indentation)
+		buildInternal(element, 0);
+	}
 
-    /**
-     * Add an indentation string as many times as required by the given level
-     *
-     * @param level the level of indentation
-     */
-    private void indent(int level) {
-    	IntStream.range(0, level).forEach(i -> this.sb.append(INDENT_STRING));
-    }
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see patterns.structural.composite.XMLBuilder#buildVersion(java.lang.String)
+	 */
+	@Override
+	public void buildVersion(String xmlVersion) {
+		sb.append("<?xml version=\"").append(xmlVersion).append("\" encoding=\"UTF-8\"?>\n");
+	}
 
-    /**
-     * Builds the XML document recursively by adding the name of the XMLElement and
-     * iterating through it's children, adding each child's name and data,
-     * indenting as necessary and closing the element's XML tag.
-     *
-     * @param element the XML element
-     * @param level the level of indentation
-     */
-    private void buildInternal(XMLElement element, int level) {
-        this.indent(level);
-        this.sb.append("<").append(element.getName()).append(">").append("\n");
-        List<XMLElement> children = element.getChildren();
-        children.forEach(child -> this.buildInternal(child, level + 1));
-        if (element.getData() != null) {
-            this.indent(level + 1);
-            this.sb.append(element.getData()).append("\n");
-        }
-        this.indent(level);
-        this.sb.append("</").append(element.getName()).append(">").append("\n");
-    }
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see patterns.structural.composite.XMLBuilder#getFormattedXML()
+	 */
+	@Override
+	public String getFormattedXML() {
+		return sb.toString();
+	}
 
-    /*
-     * (non-Javadoc)
-     *
-     * @see
-     * patterns.structural.composite.XMLBuilder#buildVersion(java.lang.String)
-     */
-    @Override
-    public void buildVersion(String xmlVersion) {
-        this.sb.append("<?xml version=\"").append(xmlVersion).append("\" encoding=\"UTF-8\"?>\n");
-    }
+	/**
+	 * Add an indentation string as many times as required by the given level
+	 *
+	 * @param level the level of indentation
+	 */
+	private void indent(int level) {
+		IntStream.range(0, level).forEach(i -> sb.append(INDENT_STRING));
+	}
 
-    /*
-     * (non-Javadoc)
-     *
-     * @see patterns.structural.composite.XMLBuilder#getFormattedXML()
-     */
-    @Override
-    public String getFormattedXML() {
-        return this.sb.toString();
-    }
+	/**
+	 * Builds the XML document recursively by adding the name of the XMLElement and
+	 * iterating through it's children, adding each child's name and data, indenting
+	 * as necessary and closing the element's XML tag.
+	 *
+	 * @param element the XML element
+	 * @param level the level of indentation
+	 */
+	private void buildInternal(XMLElement element, int level) {
+		indent(level);
+		sb.append("<").append(element.getName()).append(">").append("\n");
+		List<XMLElement> children = element.getChildren();
+		children.forEach(child -> this.buildInternal(child, level + 1));
+
+		if (element.getData() != null) {
+			indent(level + 1);
+			sb.append(element.getData()).append("\n");
+		}
+		indent(level);
+		sb.append("</").append(element.getName()).append(">").append("\n");
+	}
+
 }

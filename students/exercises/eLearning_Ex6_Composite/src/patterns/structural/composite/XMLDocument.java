@@ -36,10 +36,7 @@ package patterns.structural.composite;
 @SuppressWarnings("unused")
 public class XMLDocument {
 
-	/*
-	 * this is typically '<xml version="1.0">'
-	 */
-	private String version;
+	private String version; // typically '<xml version="1.0">'
 	private XMLElement root;
 
 	public XMLDocument(XMLElement root) {
@@ -50,7 +47,6 @@ public class XMLDocument {
 	public void setVersion(String version) {
 		this.version = version;
 	}
-
 	/*
 	 * TODO: 4. generate other getters and setters
 	 */

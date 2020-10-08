@@ -45,9 +45,9 @@ public class FamilyCarFactory extends AbstractCarFactory {
 	 */
 	@Override
 	public Hood createHood(String color) {
-		Hood hood = new FamilyCarHood(color);
-		hood.setId(getNextId());
-		return hood;
+		Hood result = new FamilyCarHood(color);
+		result.setId(getNextId());
+		return result;
 	}
 
 	/*

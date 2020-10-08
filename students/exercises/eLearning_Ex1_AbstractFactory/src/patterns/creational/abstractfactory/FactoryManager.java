@@ -68,6 +68,7 @@ public class FactoryManager {
 		 * rb.getString(PROP_KEY)];
 		 */
 		factoryClassName = null;
+
 		if (factoryClassName == null) {
 			/*
 			 * TODO: 7. Make sure if the property does not exist, to initialize
@@ -82,7 +83,12 @@ public class FactoryManager {
 		 * Example:
 		 *
 		 * <pre>
-		 * factory = (AbstractCarFactory) Class.forName(factoryClassName).getDeclaredConstructor(new Class<?>[] {}).newInstance(new Object[] {});
+		 *
+		 * try {
+		 * 	factory = (AbstractCarFactory) Class.forName(factoryClassName).getDeclaredConstructor().newInstance();
+		 * } catch (Exception e) {
+		 * 	e.printStackTrace();
+		 * }
 		 * </pre>
 		 *
 		 * Note such code can throw multiple types of exceptions that can be handled or
@@ -97,8 +103,11 @@ public class FactoryManager {
 	 * @return single instance of FactoryManager
 	 */
 	public synchronized static FactoryManager getInstance() {
+
 		if (INSTANCE == null) {
+
 			synchronized (FactoryManager.class) {
+
 				if (INSTANCE == null) {
 					INSTANCE = new FactoryManager();
 				}
@@ -129,7 +138,7 @@ public class FactoryManager {
 	public static void main(String[] args) {
 		FactoryManager factoryManager = FactoryManager.getInstance();
 		AbstractCarFactory factory = factoryManager.getFactory();
-		System.out.printf("Factory of type: %s%n", factory.getClass().getSimpleName());
+		System.out.printf("Initialized factory of type: %s%n", factory.getClass().getSimpleName());
 		Hood hood = factory.createHood("red");
 		System.out.println(hood);
 		Wheel wheel = factory.createWheel();
@@ -137,4 +146,5 @@ public class FactoryManager {
 		Engine engine = factory.createEngine();
 		System.out.println(engine);
 	}
+
 }

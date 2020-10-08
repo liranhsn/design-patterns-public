@@ -37,16 +37,16 @@ public class XMLDirector {
 
 	// TODO: 8. remove this annotation when done
 	@SuppressWarnings("unused")
-	private XMLBuilder xmlBuilder;
+	private XMLBuilder builder;
 
 	/**
 	 * Instantiates a new XML director.
 	 *
-	 * @param xmlBuilder the xml builder
+	 * @param builder the xml builder
 	 */
 	public XMLDirector(XMLBuilder xmlBuilder) {
 		super();
-		this.xmlBuilder = xmlBuilder;
+		this.builder = xmlBuilder;
 	}
 
 	/**
@@ -55,12 +55,14 @@ public class XMLDirector {
 	 * @param xmlDocument the xml document
 	 */
 	public void build(XMLDocument xmlDocument) {
-		/*
+		/**
 		 * TODO: 6. define the build operation. This is a step by step building of the
 		 * xml document so we want to delegate to out builder:
 		 *
-		 * STEP 1: builder.buildVersion(xmlDocument.getVersion()) STEP 2:
-		 * builder.build(xmlDocument.getRoot());
+		 * <pre>
+		 * STEP 1: builder.buildVersion(xmlDocument.getVersion())
+		 * STEP 2: builder.build(xmlDocument.getRoot());
+		 * </pre>
 		 */
 		throw new UnsupportedOperationException("method XMLDirector.build(XMLDocument xmlDocument) is not implemented yet!");
 	}
@@ -82,6 +84,7 @@ public class XMLDirector {
 	 * @param args the arguments
 	 */
 	public static void main(String[] args) {
+
 		try {
 			// prepare a root element
 			XMLElement root = new XMLElement("root");
@@ -108,4 +111,5 @@ public class XMLDirector {
 			e.printStackTrace();
 		}
 	}
+
 }

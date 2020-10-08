@@ -28,53 +28,28 @@
 package patterns.creational.builder;
 
 import java.util.Collection;
-import java.util.SortedSet;
 
 /**
- * The Class DictionaryBuilder is a very simple {@link WordsBuilder} where each
- * word is uniquely stored in a set
+ * The Interface DictionaryBuilder represents the basic contract for dealing with a
+ * {@link Collection} of words. It offers just basic methods to add a word to a
+ * collection of words and a getter for the collection. We will use this simple
+ * interface to represent a dictionary builder from a source of words
  */
-public class DictionaryBuilder implements WordsBuilder {
-
-	// TODO: 9. Remove this annotation when this class is implemented
-	@SuppressWarnings("unused")
-	private SortedSet<String> dictionary;
+public interface DictionaryBuilder {
 
 	/**
-	 * Instantiates a new dictionary builder.
-	 */
-	public DictionaryBuilder() {
-		super();
-		/*
-		 * TODO: 6. You'll need to instantiate the dictionary. If you want a sorted set
-		 * implementation you can use a TreeSet. Since Stings are comparable the TreeSet
-		 * will not need a comparator in the constructor to sort it's entries so you can
-		 * do something like dictionary = new TreeSet<String>();
-		 */
-		throw new UnsupportedOperationException("Constructor DictionaryBuilder() is not implemented yet!");
-	}
-
-	/*
-	 * (non-Javadoc)
+	 * Clients use this method to add words to the dictionary
 	 *
-	 * @see patterns.creational.builder.WordsBuilder#addWord(java.lang.String)
+	 * @param word the word
 	 */
-	@Override
-	public void addWord(String word) {
-		/*
-		 * TODO: 7. add a word to the dictionary
-		 */
-		throw new UnsupportedOperationException("method DictionaryBuilder.addWord(String word) is not implemented yet!");
-	}
+	public void addWord(String word);
 
-	/*
-	 * (non-Javadoc)
+	/**
+	 * Clients use this method to get the collection of words added. Different
+	 * builders may return different collections. Typically this is just the
+	 * internal collection of the dictionary.
 	 *
-	 * @see patterns.creational.builder.WordsBuilder#getCollection()
+	 * @return the collection
 	 */
-	@Override
-	public Collection<?> getCollection() {
-		// TODO: 8. Return the collection
-		throw new UnsupportedOperationException("method DictionaryBuilder.getCollection() is not implemented yet!");
-	}
+	public Collection<?> getDictionary();
 }

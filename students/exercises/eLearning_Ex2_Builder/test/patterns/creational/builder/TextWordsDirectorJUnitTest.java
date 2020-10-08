@@ -40,14 +40,14 @@ import org.junit.jupiter.api.TestInfo;
 
 /**
  * The Class TextWordsDirectorJUnitTest is a simple sanity JUnit test case for
- * the {@link TextWordsDirector} class. It tests it's basic functionality with
+ * the {@link DictionaryDirector} class. It tests it's basic functionality with
  * two different builders
  */
 public class TextWordsDirectorJUnitTest {
 
 	private static final String WORDS_FILE_NAME = "words.txt";
-	private WordsBuilder wordsCounterBuilder = new WordsCounterBuilder();
-	private WordsBuilder dictionaryBuilder = new DictionaryBuilder();
+	private DictionaryBuilder wordsCounterBuilder = new CounterDictionaryBuilder();
+	private DictionaryBuilder dictionaryBuilder = new ClassicDictionaryBuilder();
 	File inputFile = new File(WORDS_FILE_NAME);
 
 	@BeforeEach
@@ -58,42 +58,42 @@ public class TextWordsDirectorJUnitTest {
 	@Test
 	@DisplayName("test create words counter builder")
 	public void testCreateWordsCounterBuilder() {
-		TextWordsDirector director = new TextWordsDirector(wordsCounterBuilder);
+		DictionaryDirector director = new DictionaryDirector(wordsCounterBuilder);
 		assertNotNull(director);
 	}
 
 	@Test
 	@DisplayName("test create dictionary builder")
 	public void testCreateDictionaryBuilder() {
-		TextWordsDirector director = new TextWordsDirector(dictionaryBuilder);
+		DictionaryDirector director = new DictionaryDirector(dictionaryBuilder);
 		assertNotNull(director);
 	}
 
 	@Test
 	@DisplayName("test words counter builder creates words count")
 	public void testWordsCounterBuilderCreatesCollection() {
-		TextWordsDirector director = new TextWordsDirector(wordsCounterBuilder);
-		director.produceCollection(inputFile);
-		assertNotNull(wordsCounterBuilder.getCollection());
-		assertFalse(wordsCounterBuilder.getCollection().isEmpty());
+		DictionaryDirector director = new DictionaryDirector(wordsCounterBuilder);
+		director.populateDictionary(inputFile);
+		assertNotNull(wordsCounterBuilder.getDictionary());
+		assertFalse(wordsCounterBuilder.getDictionary().isEmpty());
 	}
 
 	@Test
 	@DisplayName("test dictionary builder creates dictionary")
 	public void testDictionaryBuilderCreatesCollection() {
-		TextWordsDirector director = new TextWordsDirector(dictionaryBuilder);
-		director.produceCollection(inputFile);
-		assertNotNull(dictionaryBuilder.getCollection());
-		assertFalse(dictionaryBuilder.getCollection().isEmpty());
+		DictionaryDirector director = new DictionaryDirector(dictionaryBuilder);
+		director.populateDictionary(inputFile);
+		assertNotNull(dictionaryBuilder.getDictionary());
+		assertFalse(dictionaryBuilder.getDictionary().isEmpty());
 	}
 
 	@Test
 	@DisplayName("test words counter builder print collection")
 	public void testWordsCounterBuilderPrintCollection() {
-		TextWordsDirector director = new TextWordsDirector(wordsCounterBuilder);
-		director.produceCollection(inputFile);
+		DictionaryDirector director = new DictionaryDirector(wordsCounterBuilder);
+		director.populateDictionary(inputFile);
 		try {
-			director.printCollection();
+			director.printDictionary();
 		} catch (Exception ex) {
 			fail(ex.getMessage());
 		}
@@ -102,10 +102,10 @@ public class TextWordsDirectorJUnitTest {
 	@Test
 	@DisplayName("test dictionary builder print collection")
 	public void testPrintSimpleDictionaryCollection() {
-		TextWordsDirector director = new TextWordsDirector(dictionaryBuilder);
-		director.produceCollection(inputFile);
+		DictionaryDirector director = new DictionaryDirector(dictionaryBuilder);
+		director.populateDictionary(inputFile);
 		try {
-			director.printCollection();
+			director.printDictionary();
 		} catch (Exception ex) {
 			fail(ex.getMessage());
 		}

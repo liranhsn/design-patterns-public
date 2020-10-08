@@ -5,12 +5,12 @@
  * or more contributor license agreements.  See the NOTICE file
  * distributed with this work for additional information
  * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the 
+ * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing,
  * software distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -21,50 +21,28 @@
 package patterns.creational.builder;
 
 import java.util.Collection;
-import java.util.SortedSet;
-import java.util.TreeSet;
 
 /**
- * The Class DictionaryBuilder is a very simple {@link WordsBuilder} where each
- * word is uniquely stored in a set
+ * The Interface DictionaryBuilder represents the basic contract for dealing with a
+ * {@link Collection} of words. It offers just basic methods to add a word to a
+ * collection of words and a getter for the collection. We will use this simple
+ * interface to represent a dictionary builder from a source of words
  */
-public class DictionaryBuilder implements WordsBuilder {
-
-    /** The dictionary. */
-    private SortedSet<String> dictionary;
+public interface DictionaryBuilder {
 
     /**
-     * Instantiates a new dictionary builder.
-     */
-    public DictionaryBuilder() {
-        super();
-        // You'll need to instantiate the dictionary. If you want a sorted
-        // set implementation you can use a TreeSet. Since Stings are comparable
-        // the TreeSet will not need a comparator in the constructor to sort
-        // it's entries so you can do something like dictionary = new
-        // TreeSet<String>();
-        dictionary = new TreeSet<String>();
-    }
+	 * Clients use this method to add words to the dictionary.
+	 *
+	 * @param word the word
+	 */
+    public void addWord(String word);
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Clients use this method to get the collection of words added. Different
+     * builders may return different collections. Typically this is just the
+     * internal collection of the dictionary.
      *
-     * @see patterns.creational.builder.WordsBuilder#addWord(java.lang.String)
+     * @return the collection
      */
-    @Override
-    public void addWord(String word) {
-        // add a word to the dictionary [e.g. dictionary.add(word);]
-        dictionary.add(word);
-    }
-
-    /*
-     * (non-Javadoc)
-     *
-     * @see patterns.creational.builder.WordsBuilder#getCollection()
-     */
-    @Override
-    public Collection<?> getCollection() {
-        // Return the collection
-        return dictionary;
-    }
+    public Collection<?> getDictionary();
 }

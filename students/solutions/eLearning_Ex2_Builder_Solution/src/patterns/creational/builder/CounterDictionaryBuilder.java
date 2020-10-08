@@ -25,11 +25,11 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 
 /**
- * The Class WordsCounterBuilder counts the appearance of each word in the
+ * The Class CounterDictionaryBuilder counts the appearance of each word in the
  * collection (dictionary) of words. The words are stored in a map where the key
  * is the mapand the value is the count of appearances
  */
-public class WordsCounterBuilder implements WordsBuilder {
+public class CounterDictionaryBuilder implements DictionaryBuilder {
 
     /** The words count map. */
     private SortedMap<String, Integer> wordsCountMap;
@@ -37,7 +37,7 @@ public class WordsCounterBuilder implements WordsBuilder {
     /**
      * Instantiates a new words counter builder.
      */
-    public WordsCounterBuilder() {
+    public CounterDictionaryBuilder() {
         super();
         // You'll need to instantiate the dictionary. If you want a sorted
         // map implementation you can use a TreeMap. Since Stings are comparable
@@ -50,7 +50,7 @@ public class WordsCounterBuilder implements WordsBuilder {
     /*
      * (non-Javadoc)
      *
-     * @see patterns.creational.builder.WordsBuilder#addWord(java.lang.String)
+     * @see patterns.creational.builder.DictionaryBuilder#addWord(java.lang.String)
      */
     @Override
     public void addWord(String word) {
@@ -65,10 +65,10 @@ public class WordsCounterBuilder implements WordsBuilder {
     /*
      * (non-Javadoc)
      *
-     * @see patterns.creational.builder.WordsBuilder#getCollection()
+     * @see patterns.creational.builder.DictionaryBuilder#getCollection()
      */
     @Override
-    public Collection<?> getCollection() {
+    public Collection<?> getDictionary() {
         // Return dictionary entry set [e.g. return
         // wordsCountMap.entrySet();]
         return wordsCountMap.entrySet();

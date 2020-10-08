@@ -31,36 +31,36 @@ import java.util.Collection;
 import java.util.SortedMap;
 
 /**
- * The Class WordsCounterBuilder counts the appearance of each word in the
+ * The Class CounterDictionaryBuilder counts the appearance of each word in the
  * collection (dictionary) of words. The words are stored in a map where the key
  * is the mapand the value is the count of appearances
  */
-public class WordsCounterBuilder implements WordsBuilder {
+public class CounterDictionaryBuilder implements DictionaryBuilder {
 
 	/*
 	 * TODO: 5. Remove this when the class is implemented
 	 */
 	@SuppressWarnings("unused")
-	private SortedMap<String, Integer> wordsCountMap; // the words count map.
+	private SortedMap<String, Integer> dictionary; // the words count map.
 
 	/**
 	 * Instantiates a new words counter builder.
 	 */
-	public WordsCounterBuilder() {
+	public CounterDictionaryBuilder() {
 		super();
 		/*
 		 * TODO: 2. You'll need to instantiate the dictionary. If you want a sorted map
 		 * implementation you can use a TreeMap. Since Stings are comparable the TreeMap
 		 * will not need a comparator in the constructor to sort it's entries so you can
-		 * do something like wordsCountMap = new TreeMap<String, Integer>();
+		 * do something like dictionary = new TreeMap<String, Integer>();
 		 */
-		throw new UnsupportedOperationException("Constructor WordsCounterBuilder() is not implemented yet!");
+		throw new UnsupportedOperationException("Constructor CounterDictionaryBuilder() is not implemented yet!");
 	}
 
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see patterns.creational.builder.WordsBuilder#addWord(java.lang.String)
+	 * @see patterns.creational.builder.DictionaryBuilder#addWord(java.lang.String)
 	 */
 	@Override
 	public void addWord(String word) {
@@ -70,19 +70,19 @@ public class WordsCounterBuilder implements WordsBuilder {
 		 * the same key. Other wise, this is the first time you encountered the word and
 		 * it's count is therefore 1.
 		 */
-		throw new UnsupportedOperationException("method WordsCounterBuilder.addWord(String word) is not implemented yet!");
+		throw new UnsupportedOperationException("method CounterDictionaryBuilder.addWord(String word) is not implemented yet!");
 	}
 
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see patterns.creational.builder.WordsBuilder#getCollection()
+	 * @see patterns.creational.builder.DictionaryBuilder#getDictionary()
 	 */
 	@Override
-	public Collection<?> getCollection() {
+	public Collection<?> getDictionary() {
 		/*
 		 * TODO: 4. Return the dictionary's entry set
 		 */
-		throw new UnsupportedOperationException("method WordsCounterBuilder.getCollection() is not implemented yet!");
+		throw new UnsupportedOperationException("method CounterDictionaryBuilder.getCollection() is not implemented yet!");
 	}
 }

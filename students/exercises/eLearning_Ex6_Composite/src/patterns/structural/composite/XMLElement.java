@@ -58,12 +58,10 @@ public class XMLElement {
 	@SuppressWarnings("unused")
 	public XMLElement addElement(XMLElement element) {
 		/*
-		 * TODO: 2. implement adding an element to the children list and return a
-		 * reference to this element (for chainability)
+		 * TODO: 2. implement adding an element to the children list and return a reference to this element (for chainability)
 		 */
-		if (true)
-			throw new UnsupportedOperationException("method XMLElement.addElement(XMLElement element) is not implemented yet!");
-		return this;
+		if (true) throw new UnsupportedOperationException("method XMLElement.addElement(XMLElement element) is not implemented yet!");
+		return null; // FIXME: do not return null
 	}
 
 	public String getName() {
