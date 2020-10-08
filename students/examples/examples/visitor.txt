@@ -1,0 +1,17 @@
+The Visitor Design Pattern.
+
+In object-oriented programming and software engineering, the visitor design pattern is
+a way of separating an algorithm from an object structure it operates on. A practical
+result of this separation is the ability to add new operations to existing object
+structures without modifying those structures. Thus, using the visitor pattern allows
+to conform with the open/closed principle.
+
+In essence, the visitor allows one to add new virtual functions to a family of classes
+without modifying the classes themselves; instead, one creates a visitor class that
+implements all of the appropriate specializations of the virtual function. The visitor
+takes the instance reference as input, and implements the goal through double dispatch.
+
+While powerful, the visitor pattern is more limited than conventional virtual functions.
+It is not possible to create visitors for objects without adding a small callback method
+inside each class. In naive implementations, the callback method in each of the classes
+is not inheritable.

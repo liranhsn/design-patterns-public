@@ -1,0 +1,159 @@
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	line-height: 1.1;
+	background: white;
+	color: white;
+}
+
+p,li {
+	font-size: 10pt;
+	margin-top: 3px;
+}
+
+h1,h2,h3,h4 {
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+h5,h6 {
+	margin-top: 1em;
+}
+
+h1 {
+	text-align: left;
+}
+
+h1,h2,h4,h6 {
+	font-weight: bold;
+}
+
+h3,h5 {
+	font-style: italic;
+}
+
+h1 {
+	font-size: 12pt;
+	margin-top: -10px;
+	margin-bottom: 6px;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 10pt;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+h3 {
+	font-size: 10pt;
+	font-weight: normal;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+li {
+	margin-left: 5px;
+}
+
+a.intent {
+	color: lime;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+	text-align: right;
+	line-height: 1.0;
+	text-decoration: none;
+}
+
+a.intent:visited {
+	color: lime;
+	text-decoration: none;
+}
+
+a.intent:hover {
+	color: lime;
+	background-color: maroon;
+	text-decoration: blink;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+}
+
+a.nav {
+	color: yellow;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+	text-align: right;
+	line-height: 1.0;
+	text-decoration: none;
+}
+
+a.nav:visited {
+	color: yellow;
+	text-decoration: none;
+}
+
+a.nav:hover {
+	color: yellow;
+	background-color: maroon;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: right;
+	line-height: 1.0;
+	text-decoration: none;
+}
+
+a.menu {
+	color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: right;
+	line-height: 1.0;
+	text-decoration: none;
+}
+
+a.menu:visited {
+	color: white;
+}
+
+a.menu:hover {
+	text-decoration: blink;
+	color: #FF6600;
+}
+
+td.title,span.title {
+	color: #FF6600;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+td.answer,span.answer {
+	color: yellow;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+span.title {
+	text-decoration: none;
+}
+
+a.main {
+	color: black;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: right;
+	line-height: 1.0;
+	text-decoration: none;
+}
+
+a.main:visited {
+	color: maroon;
+}
+
+a.main:hover {
+	text-decoration: blink;
+	color: #FF6600;
+}
