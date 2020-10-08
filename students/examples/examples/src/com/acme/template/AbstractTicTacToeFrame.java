@@ -35,7 +35,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 /**
- * The Class AbstractTicTacToeFrame sets the GUI for a Tic Tac Toe game and
+ * The Class TicTacToeFrame sets the GUI for a Tic Tac Toe game and
  * provides, via the Template design patterns the basic algorithm for managing
  * the game by sub classes.
  */
@@ -49,7 +49,7 @@ public abstract class AbstractTicTacToeFrame extends JFrame {
 	protected final int[][] winCombos = new int[][] {
 		    { 0, 1, 2 }, { 3, 4, 5 }, { 6, 7, 8 }, // indices 0 - 2: horizontal wins
 			{ 0, 3, 6 }, { 1, 4, 7 }, { 2, 5, 8 }, // indices 3 - 5: vertical wins
-			{ 0, 4, 8 }, { 2, 4, 6 } // indices 6 - 7: diagonal wins
+			{ 0, 4, 8 }, { 2, 4, 6 }               // indices 6 - 7: diagonal wins
 	};
 	protected final JButton buttons[] = new JButton[9];
 

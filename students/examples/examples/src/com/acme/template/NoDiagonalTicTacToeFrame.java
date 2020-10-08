@@ -21,6 +21,7 @@
 package com.acme.template;
 
 import java.awt.Color;
+import java.util.stream.IntStream;
 
 /**
  * The Class NoDiagonalTicTacToeFrame is an implementation of a Tic Tac Toe game
@@ -54,9 +55,9 @@ public class NoDiagonalTicTacToeFrame extends TicTacToeFrame {
 	@Override
 	protected void checkGameStatusTemplate() {
 		for (int i = 0; i <= 5 && !isGameWon(); i++) {
-			if (buttons[winCombos[i][0]].getActionCommand().equals(buttons[winCombos[i][1]].getActionCommand())
-					&& buttons[winCombos[i][1]].getActionCommand().equals(buttons[winCombos[i][2]].getActionCommand())
-					&& buttons[winCombos[i][0]].getActionCommand() != "") {
+			if (buttons[winCombos[i][0]].getActionCommand().equals(buttons[winCombos[i][1]].getActionCommand()) &&
+				buttons[winCombos[i][1]].getActionCommand().equals(buttons[winCombos[i][2]].getActionCommand()) &&
+				buttons[winCombos[i][0]].getActionCommand() != "") {
 				winTrioIndex = i;
 				markGameWon();
 			}
@@ -84,32 +85,13 @@ public class NoDiagonalTicTacToeFrame extends TicTacToeFrame {
 	protected void postGameWonHook() {
 		Color color = numOfMoves % 2 == 0 ? Color.blue : Color.black;
 		switch (winTrioIndex) {
-			case 0 -> {
-				for (int i = 0; i < 3; i++)
-					buttons[i].setBackground(color);
-			}
-			case 1 -> {
-				for (int i = 3; i < 6; i++)
-					buttons[i].setBackground(color);
-			}
-			case 2 -> {
-				for (int i = 6; i < 9; i++)
-					buttons[i].setBackground(color);
-			}
-			case 3 -> {
-				for (int i = 0; i < 7; i += 3)
-					buttons[i].setBackground(color);
-			}
-			case 4 -> {
-				for (int i = 1; i < 8; i += 3)
-					buttons[i].setBackground(color);
-			}
-			case 5 -> {
-				for (int i = 2; i < 9; i += 3)
-					buttons[i].setBackground(color);
-			}
+			case 0 -> IntStream.iterate(0, i -> i < 3, i -> i + 1).forEach(i -> buttons[i].setBackground(color));
+			case 1 -> IntStream.iterate(3, i -> i < 6, i -> i + 1).forEach(i -> buttons[i].setBackground(color));
+			case 2 -> IntStream.iterate(6, i -> i < 9, i -> i + 1).forEach(i -> buttons[i].setBackground(color));
+			case 3 -> IntStream.iterate(0, i -> i < 7, i -> i + 3).forEach(i -> buttons[i].setBackground(color));
+			case 4 -> IntStream.iterate(1, i -> i < 8, i -> i + 3).forEach(i -> buttons[i].setBackground(color));
+			case 5 -> IntStream.iterate(2, i -> i < 9, i -> i + 3).forEach(i -> buttons[i].setBackground(color));
 		}
-		;
 		super.postGameWonHook();
 	}
 }

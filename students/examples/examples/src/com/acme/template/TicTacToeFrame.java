@@ -25,7 +25,7 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 /**
- * The Class TicTacToeFrame is an implementation of a traditional Tic Tac Toe
+ * The Class NormalTicTacToeFrame is an implementation of a traditional Tic Tac Toe
  * game where any trio of the same shape is considered a win.
  *
  * This class implements the {@link #doPlayerMoveTemplate(JButton)} and
@@ -103,7 +103,7 @@ public class TicTacToeFrame extends AbstractTicTacToeFrame {
 	 */
 	@Override
 	protected void postGameWonHook() {
-		playClip("churchbell.wav");
+		//playClip("churchbell.wav");
 		JOptionPane.showMessageDialog(null, winner + " wins the game!");
 		markDeadLock();
 		reset();
