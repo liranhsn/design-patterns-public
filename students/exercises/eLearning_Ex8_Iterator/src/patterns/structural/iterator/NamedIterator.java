@@ -60,15 +60,16 @@ public class NamedIterator implements Iterator<XMLElement> {
 		/**
 		 * <pre>
 		 * current = null;
+		 *
 		 * while (iterator.hasNext() && current == null) {
-		 * 	XMLElement element = iterator.next();
-		 * 	if (element.getName().equals(elementName))
-		 * 		current = element;
-		 * 	for (Iterator<XMLElement> iter = element.iterator(); iter.hasNext() && current == null;) {
-		 * 		XMLElement next = iter.next();
-		 * 		if (next.getName().equals(elementName))
-		 * 			current = next;
-		 * 	}
+		 *    XMLElement element = iterator.next();
+		 *    if (element.getName().equals(elementName))
+		 *  	  current = element;
+		 *    for (Iterator<XMLElement> iter = element.iterator(); iter.hasNext() && current == null;) {
+		 *        XMLElement next = iter.next();
+		 *        if (next.getName().equals(elementName))
+		 *            current = next;
+		 *    }
 		 * }
 		 * </pre>
 		 */

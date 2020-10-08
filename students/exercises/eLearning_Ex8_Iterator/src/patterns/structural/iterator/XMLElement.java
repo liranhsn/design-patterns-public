@@ -59,7 +59,7 @@ public class XMLElement {
 	public static void iterate(XMLElement element) {
 		/*
 		 * TODO: 2. loop through the entire collection of the given element children.
-		 * Use an iterator obtained via the iterator() method. For each element, print
+		 * Use an iterator obtained via the element.iterator() method. For each element, print
 		 * the element and then recursively iterate through it. You should do something
 		 * like the following example in pseudo code:
 		 *
@@ -69,8 +69,8 @@ public class XMLElement {
 		/**
 		 * <pre>
 		 * for (declare iterator;iter.hasNext();) {
-		 *   print next element;
-		 *   iterate(next element);
+		 *     print next element;
+		 *     iterate(next element);
 		 * }
 		 * </pre>
 		 */
