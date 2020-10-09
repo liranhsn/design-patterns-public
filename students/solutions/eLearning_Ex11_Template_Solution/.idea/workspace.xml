@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6d6cf6a7-db13-4d4e-9dee-4988890955e2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/test/patterns/behavioral/template/AbstractLoggerJUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/patterns/behavioral/template/AbstractLoggerJUnitTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1idk07YGGy9dywz5G01iskiiNM5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../eLearning_Ex1_AbstractFactory_Solution" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2530923" />
+  </component>
+  <component name="RunManager">
+    <configuration name="AbstractLoggerJUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="eLearning_Ex11_Template_Solution" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="patterns.behavioral.template.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="patterns.behavioral.template" />
+      <option name="MAIN_CLASS_NAME" value="patterns.behavioral.template.AbstractLoggerJUnitTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AbstractLoggerJUnitTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6d6cf6a7-db13-4d4e-9dee-4988890955e2" name="Default Changelist" comment="" />
+      <created>1602244630611</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602244630611</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="694" y="270" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1602244879841">
+      <screen x="0" y="0" width="1920" height="1028" />
+    </state>
+    <state x="694" y="270" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1028@0.0.1920.1028" timestamp="1602244879841" />
+    <state x="744" y="270" key="FileChooserDialogImpl" timestamp="1602246530743">
+      <screen x="0" y="0" width="1920" height="1028" />
+    </state>
+    <state x="744" y="270" key="FileChooserDialogImpl/0.0.1920.1028@0.0.1920.1028" timestamp="1602246530743" />
+    <state width="1874" height="270" key="GridCell.Tab.0.bottom" timestamp="1602245030666">
+      <screen x="0" y="0" width="1920" height="1028" />
+    </state>
+    <state width="1874" height="270" key="GridCell.Tab.0.bottom/0.0.1920.1028@0.0.1920.1028" timestamp="1602245030666" />
+    <state width="1874" height="270" key="GridCell.Tab.0.center" timestamp="1602245030665">
+      <screen x="0" y="0" width="1920" height="1028" />
+    </state>
+    <state width="1874" height="270" key="GridCell.Tab.0.center/0.0.1920.1028@0.0.1920.1028" timestamp="1602245030665" />
+    <state width="1874" height="270" key="GridCell.Tab.0.left" timestamp="1602245030665">
+      <screen x="0" y="0" width="1920" height="1028" />
+    </state>
+    <state width="1874" height="270" key="GridCell.Tab.0.left/0.0.1920.1028@0.0.1920.1028" timestamp="1602245030665" />
+    <state width="1874" height="270" key="GridCell.Tab.0.right" timestamp="1602245030666">
+      <screen x="0" y="0" width="1920" height="1028" />
+    </state>
+    <state width="1874" height="270" key="GridCell.Tab.0.right/0.0.1920.1028@0.0.1920.1028" timestamp="1602245030666" />
+    <state x="444" y="90" key="SettingsEditor" timestamp="1602246515768">
+      <screen x="0" y="0" width="1920" height="1028" />
+    </state>
+    <state x="444" y="90" key="SettingsEditor/0.0.1920.1028@0.0.1920.1028" timestamp="1602246515768" />
+  </component>
+</project>

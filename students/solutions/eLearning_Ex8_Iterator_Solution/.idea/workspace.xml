@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="459f5fd2-1690-4880-b404-0e5f23ca0b83" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../eLearning_Ex11_Template_Solution/test/patterns/behavioral/template/AbstractLoggerJUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../eLearning_Ex11_Template_Solution/test/patterns/behavioral/template/AbstractLoggerJUnitTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1idjl2KNEGC1d9It9lNZJp6IGSG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../eLearning_Ex9_Command_Solution" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="459f5fd2-1690-4880-b404-0e5f23ca0b83" name="Default Changelist" comment="" />
+      <created>1602244510831</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602244510831</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="694" y="270" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1602244528705">
+      <screen x="0" y="0" width="1920" height="1028" />
+    </state>
+    <state x="694" y="270" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1028@0.0.1920.1028" timestamp="1602244528705" />
+    <state x="744" y="270" key="FileChooserDialogImpl" timestamp="1602246706397">
+      <screen x="0" y="0" width="1920" height="1028" />
+    </state>
+    <state x="744" y="270" key="FileChooserDialogImpl/0.0.1920.1028@0.0.1920.1028" timestamp="1602246706397" />
+    <state x="444" y="90" key="SettingsEditor" timestamp="1602246694084">
+      <screen x="0" y="0" width="1920" height="1028" />
+    </state>
+    <state x="444" y="90" key="SettingsEditor/0.0.1920.1028@0.0.1920.1028" timestamp="1602246694084" />
+  </component>
+</project>

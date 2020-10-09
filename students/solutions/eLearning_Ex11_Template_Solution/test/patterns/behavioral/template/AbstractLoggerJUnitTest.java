@@ -20,15 +20,13 @@
  */
 package patterns.behavioral.template;
 
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.*;
 
 import java.io.File;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInfo;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 
 /**
