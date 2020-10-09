@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="890277a4-215c-4709-85e6-d41632ffdce4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/acme/mediator/test/IMediatorJUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/acme/mediator/IMediatorJUnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../solutions/eLearning_Ex11_Template_Solution/test/patterns/behavioral/template/AbstractLoggerJUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../solutions/eLearning_Ex11_Template_Solution/test/patterns/behavioral/template/AbstractLoggerJUnitTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="890277a4-215c-4709-85e6-d41632ffdce4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,9 +28,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2530923" />
   </component>
   <component name="RunManager" selected="Application.NoMediatorDemo">
     <configuration name="MediatorDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -118,9 +114,9 @@
       <screen x="0" y="0" width="1920" height="1028" />
     </state>
     <state width="1874" height="270" key="GridCell.Tab.0.right/0.0.1920.1028@0.0.1920.1028" timestamp="1602247491771" />
-    <state x="444" y="90" key="SettingsEditor" timestamp="1602247371086">
+    <state x="444" y="90" width="1032" height="848" key="SettingsEditor" timestamp="1602248256852">
       <screen x="0" y="0" width="1920" height="1028" />
     </state>
-    <state x="444" y="90" key="SettingsEditor/0.0.1920.1028@0.0.1920.1028" timestamp="1602247371086" />
+    <state x="444" y="90" width="1032" height="848" key="SettingsEditor/0.0.1920.1028@0.0.1920.1028" timestamp="1602248256852" />
   </component>
 </project>
