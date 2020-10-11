@@ -27,6 +27,7 @@
  */
 package patterns.creational.abstractfactory;
 
+import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
 import patterns.creational.carparts.Engine;
@@ -56,25 +57,28 @@ public class FactoryManager {
 	@SuppressWarnings("unused")
 	private FactoryManager() {
 		super();
-		/*
-		 * TODO: 5. Read the properties file using a resource bundle. This is typically
-		 * done by code like this: ResourceBundle rb =
-		 * ResourceBundle.getBundle(RESOURCE_BUNDLE_NAME)
-		 */
-		ResourceBundle rb = null;
-		/*
-		 * TODO: 6. Initialize the factoryClassName property. It's value is the outcome
-		 * of reading the 'PROP_KEY' property from the resource bundle [e.g.
-		 * rb.getString(PROP_KEY)];
-		 */
-		factoryClassName = null;
-
-		if (factoryClassName == null) {
+		try {
 			/*
-			 * TODO: 7. Make sure if the property does not exist, to initialize
-			 * the'factoryClassName' with a default value. [e.g. if (factoryClassName ==
-			 * null) factoryClassName = DEFAULT_FACTORY]
+			 * TODO: 5. Read the properties file using a resource bundle. This is typically
+			 * done by code like this: ResourceBundle rb =
+			 * ResourceBundle.getBundle(RESOURCE_BUNDLE_NAME)
 			 */
+			ResourceBundle rb = ResourceBundle.getBundle(RESOURCE_BUNDLE_NAME);
+			/*
+			 * TODO: 6. Initialize the factoryClassName property. It's value is the outcome
+			 * of reading the 'PROP_KEY' property from the resource bundle [e.g.
+			 * rb.getString(PROP_KEY)];
+			 */
+			factoryClassName = null;
+		} catch (Exception ex) {
+			ex.printStackTrace();
+			if (factoryClassName == null) {
+				/*
+				 * TODO: 7. Make sure if the property does not exist, to initialize
+				 * the'factoryClassName' with a default value. [e.g. if (factoryClassName ==
+				 * null) factoryClassName = DEFAULT_FACTORY]
+				 */
+			}
 		}
 		/**
 		 * TODO: 8. Now that you got a 'factoryClassName' value, use reflection to
