@@ -25,14 +25,14 @@ import java.util.ResourceBundle;
 public class BankStorageFactory {
 
 	public static final String PROP_FILE_BASENAME = "bankstorage";
-	private Class<BankStorage> concreteClass;
+	private Class<?> concreteClass;
 
-	@SuppressWarnings("unchecked")
 	public BankStorageFactory() {
 		try {
-			ResourceBundle bundle = ResourceBundle.getBundle(getClass().getPackage().getName() + "." + PROP_FILE_BASENAME);
+			ResourceBundle bundle = ResourceBundle
+					.getBundle(getClass().getPackage().getName() + "." + PROP_FILE_BASENAME);
 			String classname = bundle.getString("storage.classname");
-			concreteClass = (Class<BankStorage>) Class.forName(classname);
+			concreteClass = (Class<?>) Class.forName(classname);
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
@@ -40,8 +40,9 @@ public class BankStorageFactory {
 
 	public BankStorage createBankStorage() {
 		try {
-			System.out.println("BankStorageFactory.createBankStorage() -> creating new " + concreteClass.getCanonicalName());
-			return concreteClass.getDeclaredConstructor().newInstance(new Object[] {});
+			System.out.println(
+					"BankStorageFactory.createBankStorage() -> creating new " + concreteClass.getCanonicalName());
+			return (BankStorage) concreteClass.getDeclaredConstructor().newInstance();
 		} catch (Exception ex) {
 			ex.printStackTrace();
 			return null;
