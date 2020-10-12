@@ -41,11 +41,11 @@ public class ComboDirector {
 	public Component create(String[] elements) {
 		Arrays.stream(elements).forEach(c -> {
 			if (c == null)
-				builder.addSeparator();
+				builder.buildSeparator();
 			else
-				builder.addPart(c);
+				builder.buildPart(c);
 		});
-		return builder.getResult();
+		return builder.build();
 	}
 
 	private void center(Frame frame) {

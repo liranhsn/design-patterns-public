@@ -33,20 +33,20 @@ class RadioButtonBuilder extends Builder {
 	private ButtonGroup group = new ButtonGroup();
 
 	@Override
-	public void addPart(String choices) {
+	public void buildPart(String choices) {
 		JRadioButton bt = new JRadioButton(choices);
 		group.add(bt);
 		box.add(bt);
 	}
 
 	@Override
-	public void addSeparator() {
+	public void buildSeparator() {
 		box.add(new JSeparator());
 	}
 
 	// Return the Complex object
 	@Override
-	public Component getResult() {
+	public Component build() {
 		group.getElements().nextElement().setSelected(true); // select first radio button
 		return box;
 	}

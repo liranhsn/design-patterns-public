@@ -29,17 +29,17 @@ public abstract class Builder {
 	 *
 	 * @param choices
 	 */
-	public abstract void addPart(String choices);
+	public abstract void buildPart(String choices);
 
 	/**
 	 * adds a separator between items in a component
 	 */
-	public abstract void addSeparator();
+	public abstract void buildSeparator();
 
 	/**
 	 * return the built up component
 	 *
 	 * @return the component
 	 */
-	public abstract Component getResult();
+	public abstract Component build();
 }

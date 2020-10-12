@@ -29,18 +29,18 @@ public class DropdownBuilder extends Builder {
 	private JComboBox<String> dropdown = new JComboBox<>();
 
 	@Override
-	public void addPart(String choices) {
+	public void buildPart(String choices) {
 		dropdown.addItem(choices);
 	}
 
 	@Override
-	public void addSeparator() {
+	public void buildSeparator() {
 		dropdown.addItem("--------");
 	}
 
 	// Return the Complex object
 	@Override
-	public Component getResult() {
+	public Component build() {
 		return dropdown;
 	}
 }
