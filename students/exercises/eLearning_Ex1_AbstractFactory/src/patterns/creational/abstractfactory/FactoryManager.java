@@ -27,7 +27,6 @@
  */
 package patterns.creational.abstractfactory;
 
-import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
 import patterns.creational.carparts.Engine;
