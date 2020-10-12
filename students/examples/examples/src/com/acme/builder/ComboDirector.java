@@ -38,6 +38,12 @@ public class ComboDirector {
 		this.builder = builder;
 	}
 
+	/**
+	 * Algorithm
+	 *
+	 * @param elements the combo box values
+	 * @return the combo box component
+	 */
 	public Component create(String[] elements) {
 		Arrays.stream(elements).forEach(c -> {
 			if (c == null)
@@ -68,7 +74,7 @@ public class ComboDirector {
 	}
 
 	public static void main(String[] args) {
-		//ComboDirector director = new ComboDirector(new RadioButtonBuilder());
+		// ComboDirector director = new ComboDirector(new RadioButtonBuilder());
 		ComboDirector director = new ComboDirector(new DropdownBuilder());
 		String[] elements = { "black", "white", null, "red", "green", "blue", null, "yellow" };
 		Component comp = director.create(elements);
