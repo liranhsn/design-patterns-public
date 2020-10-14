@@ -5,12 +5,12 @@
  * or more contributor license agreements.  See the NOTICE file
  * distributed with this work for additional information
  * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the 
+ * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing,
  * software distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -32,6 +32,7 @@ import javax.sound.sampled.Clip;
  */
 public class BellCommand implements Command {
 
+	private static final boolean START_CLIP = false;
 	private String fileName;
 	private String msg;
 
@@ -42,10 +43,12 @@ public class BellCommand implements Command {
 	}
 
 	private synchronized void playClip(String fileName) {
-		try (AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new BufferedInputStream(new FileInputStream(fileName)));
+		try (AudioInputStream audioInputStream = AudioSystem
+				.getAudioInputStream(new BufferedInputStream(new FileInputStream(fileName)));
 				Clip clip = AudioSystem.getClip();) {
 			clip.open(audioInputStream);
-			clip.start();
+			if (START_CLIP)
+				clip.start();
 			this.wait(clip.getMicrosecondLength());
 			// clip.drain();
 		} catch (Exception e) {
