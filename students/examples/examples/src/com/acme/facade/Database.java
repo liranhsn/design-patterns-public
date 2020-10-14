@@ -5,12 +5,12 @@
  * or more contributor license agreements.  See the NOTICE file
  * distributed with this work for additional information
  * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the 
+ * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing,
  * software distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -62,12 +62,9 @@ public class Database implements IDataAccessObject {
 		if (conn == null) {
 			synchronized (this) {
 				Class.forName(driver); // This will load the MySQL driver, each DB has its own driver
-				conn = DriverManager.getConnection(url + "?user=" + user + "&password=" + password + "&serverTimezone=UTC"); // Setup
-				// the
-				// connection
-				// with
-				// the
-				// DB
+				conn = DriverManager
+						.getConnection(url + "?user=" + user + "&password=" + password + "&serverTimezone=UTC"); // Setup
+				// the connection with the DB
 				System.out.printf("\nDatabase.connect() -> connected to '%s'%n", url);
 			}
 		}
@@ -178,7 +175,8 @@ public class Database implements IDataAccessObject {
 	}
 
 	public static void main(String[] args) throws Exception {
-		IDataAccessObject db = new Database("com.mysql.cj.jdbc.Driver", "jdbc:mysql://localhost:3306/mydatabase", "myuser", "mysecret");
+		IDataAccessObject db = new Database("com.mysql.cj.jdbc.Driver", "jdbc:mysql://localhost:3306/mydatabase",
+				"myuser", "mysecret");
 		db.connect();
 		System.out.println("Table Names:");
 		for (String name : db.getTableNames())
