@@ -42,13 +42,23 @@ public class Database implements IDataAccessObject {
 
 	private volatile Connection conn;
 	private String driver, url, user, password;
+	public static final String MYSQL_DRIVER = "com.mysql.cj.jdbc.Driver";
+	public static final String MYSQL_DBURL = "jdbc:mysql://localhost:3306/";
 
-	public Database(String driver, String url, String user, String password) {
+	private Database(String driver, String url, String user, String password) {
 		super();
 		this.driver = driver;
 		this.url = url;
 		this.user = user;
 		this.password = password;
+	}
+
+	public static Database getDatabase(String driver, String url, String user, String password) {
+		return new Database(driver, url, user, password);
+	}
+
+	public static Database getMySQLDatabase(String dbName, String user, String password) {
+		return new Database(MYSQL_DRIVER, MYSQL_DBURL + dbName, user, password);
 	}
 
 	@Override
@@ -175,8 +185,7 @@ public class Database implements IDataAccessObject {
 	}
 
 	public static void main(String[] args) throws Exception {
-		IDataAccessObject db = new Database("com.mysql.cj.jdbc.Driver", "jdbc:mysql://localhost:3306/mydatabase",
-				"myuser", "mysecret");
+		IDataAccessObject db = Database.getMySQLDatabase("mydatabase", "myuser", "mysecret");
 		db.connect();
 		System.out.println("Table Names:");
 		for (String name : db.getTableNames())
