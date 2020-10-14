@@ -20,21 +20,18 @@
  */
 package com.acme.cor;
 
-public class Test {
+/**
+ * A leader is the lowest level of purchase authority. Above leader are:
+ * Manager Director, VicePresident and then President.
+ */
+public class LeaderAuthority extends AbstractPurchaseAuthority {
 
-	public static void main(String[] args) {
-		AbstractPurchaseAuthority president = new PresidentAuthority(null);
-		AbstractPurchaseAuthority vicePresident = new VicePresidentAuthority(president);
-		AbstractPurchaseAuthority director = new DirectorAuthority(vicePresident);
-		AbstractPurchaseAuthority manager = new ManagerAuthority(director);
-		AbstractPurchaseAuthority leader = new LeaderAuthority(manager);
+	@Override
+	double getAuthorityLimit() {
+		return 5 * base_authority_limit;
+	}
 
-		// enter ctrl+c to kill.
-		boolean quit = false;
-		int seq = 0;
-		while (!quit) {
-			double amount = InputUtil.inputDouble("Enter purchase request amount (or 'quit'): ");
-			leader.approve(new PurchaseRequest(++seq, amount * seq, "My department really needs it..."));
-		}
+	public LeaderAuthority(AbstractPurchaseAuthority successor) {
+		super(successor);
 	}
 }
